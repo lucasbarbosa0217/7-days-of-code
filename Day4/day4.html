@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia 4</title>
+
+    <style>
+        .container {
+            font-family: sans-serif;
+            font-weight: 400;
+            padding: 2rem;
+            
+            
+            box-sizing: border-box;
+            width: 100vw;
+            max-width: 400px;
+            border-radius: 38px;
+background: #212121;
+box-shadow:  19px 19px 38px #1c1c1c,
+             -19px -19px 38px #262626;
+        }
+        body{
+            background-color:#212121;
+            color: white;
+            box-sizing: border-box;
+            padding: 16px 16px;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .guess{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .guess input, button{
+            width: 100%;
+            box-sizing: border-box;
+            padding: 16px;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            border-radius: 48px;
+            color: white;
+background: #212121;
+box-shadow: inset 9px 9px 15px #1a1a1a,
+            inset -9px -9px 15px #282828;
+        }
+
+        .guess button{
+            cursor: pointer;
+
+        }
+        .guess button:hover{
+            border-radius: 38px;
+background: #303030;
+box-shadow: inset 19px 19px 38px #292929,
+            inset -19px -19px 38px #373737;
+        }
+
+        .sucesso{
+            margin-top: 12px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="mensagem" class="container">
+        <div class="guess" id="guess">
+            <label for="text-input">Chute um número</label>
+            <input type="text" id="text-input" placeholder="Número de 1 à 10" />
+            <button type="button" id="Enviar">Enviar</button>
+            
+        </div>
+        <div class="sucesso" id="sucesso"></div>
+    </div>
+    <script src="./day4.js" ></script>
+</body>
+</html>
