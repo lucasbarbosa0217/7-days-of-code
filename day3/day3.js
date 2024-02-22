@@ -22,12 +22,16 @@ while (addTec){
 
 const mensagem = document.getElementById("mensagem");
 
+const formatador = new Intl.ListFormat('pt', {
+    style: "long",
+    type: "conjunction"
+})
 mensagem.innerText = `
                      Atualmente você prefere ${escolhas[0]}
                      \n e quer aprender ${escolhas[1]}!
                      \n ${fullstack < 2 ? "Você não quer ser Fullstack!" : "Você quer ser Fullstack!"}
                     \n Lista de tecnologias que você quer aprender:
-                    \n ${listTecnologia}
+                    \n ${formatador.format(listTecnologia)}
                     `
 
                     
