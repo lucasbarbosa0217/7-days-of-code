@@ -1,0 +1,183 @@
+:root{
+    --background-color: #020617;
+    --accent-color: #15803d;
+    --remove-color: #b91c1c;
+    --border-radius: 16px;
+    --light-background-color: #1e293b;
+    --text-color: #f1f5f9;
+    --detail-background: #334155;
+    --dark-color: #94a3b8;
+    --placeholder: #cbd5e1;
+    --input-background: #0f172a;
+    --add-color:#166534;
+    --add-color-text:#bbf7d0;
+    --add-color-hover: #22c55e;
+    font-size:14px
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    background-color: var(--background-color);
+    justify-content: center;
+    color: var(--text-color);
+    font-family: sans-serif;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+h2{
+    color: var(--text-color)
+}
+
+.formList{
+    width: 40vw;
+    box-sizing:border-box;
+    padding:16px;
+    margin: 16px 0 16px 16px;
+    max-width: 600px;
+    flex-shrink:0;
+  
+    background-color:var(--light-background-color);
+    border: 5px solid var(--border-color);
+    border-top: 20px solid var(--accent-color);
+    display:flex;
+    flex-direction: column;
+    gap:16px;
+    min-height: fit-content
+}
+
+
+.tipoProduto{
+
+    flex-grow:1;
+    border-radius: 8px;
+    background-color: var(--detail-background)
+}
+
+.divisor{
+    background-color: var(--dark-color);
+    height:1px;
+    width: 100%;
+}
+
+
+
+.text-input{
+    padding:8px;
+    background-color: var(--input-background);
+    outline: none;
+    border: none;
+   flex-grow:1;
+    border-bottom:3px solid var(--background-color);
+    color: var(--text-color);
+    margin:0;
+    transition: all .1s;
+    border-radius: 5px 0 0 5px
+
+}
+
+.input-div{
+    display:inline-flex;
+    height:40px;
+   
+    flex-grow:1;
+}
+
+.input-div button{
+    background-color: var(--background-color);
+    outline:none;
+    border:none;
+    width:32px;
+    cursor:pointer;
+    transition: all .1s;
+    order: 2;
+    border-radius: 0 5px 5px 0
+}
+
+.button-add {
+    background-color: var(--add-color);
+    color: var(--add-color-text);
+    width:40px;
+    border:0;
+    outline:0;
+    height:40px;
+    border-radius:50px;
+    transition:all .1s;
+    cursor:pointer;
+    flex-shrink:0;
+}
+
+
+.button-add:hover{
+    background-color: var(--add-color-hover)
+}
+
+.button-add:active{
+    background-color: var(--add-color-text)
+}
+
+.button-add i {
+    font-size: 1.1rem
+}
+  
+.input-div button:hover{
+    background-color: var(--light-background-color)
+}
+
+.input-div button:hover ~ .text-input{
+    border-bottom:3px solid var(--light-background-color);
+}
+
+.input-div button:active {
+    background-color: var(--remove-color);
+  }
+  .input-div button:active  ~ .text-input{
+    border-bottom:3px solid var(--remove-color);
+  }
+
+.input-div button i {
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+.input-area input::placeholder{
+    color: var(--placeholder)
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    padding:16px;
+    align-items:center;
+}
+
+.input-area{
+    width:100%;
+    max-height: 100%;
+    padding:8px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    align-content:flex-start;
+    overflow-x:hidden;
+    padding:16px;
+}
+
+
+.list{
+    margin: 8px;
+    width:60vw;
+    flex-shrink:0;
+    max-width:600px;
+    max-height:calc(100dvh - 16px);
+    background-color:blue;
+    display:flex;
+    overflow:hidden
+    
+}
