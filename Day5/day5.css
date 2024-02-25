@@ -29,6 +29,8 @@ body{
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    align-items:center;
+    flex-direction:column;
 }
 
 h2{
@@ -36,10 +38,10 @@ h2{
 }
 
 .formList{
-    width: 40vw;
+    width: 100dvw;
     box-sizing:border-box;
     padding:16px;
-    margin: 16px 0 16px 16px;
+    margin: 0 16px 0 16px;
     max-width: 600px;
     flex-shrink:0;
   
@@ -52,6 +54,34 @@ h2{
     min-height: fit-content
 }
 
+.listList{
+    width: 100dvw;
+    max-width: 600px;
+    padding:16px;
+    margin: 0 16px 0 16px;
+    border-bottom: 20px solid var(--accent-color);
+    background-color:var(--light-background-color);
+    min-height: fit-content;
+    gap:8px;
+    display:flex;
+    flex-direction:column
+}
+
+.productList{
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    text-align:center;
+    align-items:center;
+    justify-content:space-between;
+    background-color: var(--detail-background);
+    padding:8px;
+    border-radius:8px;
+}
+
+.productList p{
+    display:inline;
+}
 
 .tipoProduto{
 
@@ -85,8 +115,8 @@ h2{
 .input-div{
     display:inline-flex;
     height:40px;
-   
     flex-grow:1;
+    width:100%;
 }
 
 .input-div button{
@@ -99,6 +129,8 @@ h2{
     order: 2;
     border-radius: 0 5px 5px 0
 }
+
+
 
 .button-add {
     background-color: var(--add-color);
@@ -144,6 +176,7 @@ h2{
 .input-div button i {
     color: var(--text-color);
     font-size: 1.1rem;
+    mouse-events: none;
 }
 
 .input-area input::placeholder{
@@ -170,14 +203,3 @@ header{
 }
 
 
-.list{
-    margin: 8px;
-    width:60vw;
-    flex-shrink:0;
-    max-width:600px;
-    max-height:calc(100dvh - 16px);
-    background-color:blue;
-    display:flex;
-    overflow:hidden
-    
-}

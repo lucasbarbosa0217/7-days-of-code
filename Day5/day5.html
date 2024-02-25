@@ -9,34 +9,33 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="day5.css">
-    
 </head>
 <body>
     <div class="formList">
         <div class="tipoProduto">
             <header>
             <h2>Adicione produtos na lista.</h2>
+            <button id="add" class="button-add"><i class="fa-solid fa-add"></i></button>
+
         </header>
             <div class="divisor"></div>
             <div class="input-area" id="input-area">
                 
-            <div class="input-div" id="input-laticinios">
-                <button><i class="fa-solid fa-x"></i></button>
-                <input type="text" class="text-input"
-            placeholder="Nome de um produto">
-         
-        </div>
-        <button id="add" class="button-add"><i class="fa-solid fa-add"></i></button>
+                <div class="input-div" id="input-laticinios">
+                    <button onClick="remover(event)"><i class="fa-solid fa-x"></i></button>
+                    <input type="text" class="text-input" placeholder="Nome de um produto" />
+                </div>
 
             </div>
 
       </div>
     
-     
+      <button id="enviar">Enviar</button>
     </div>
-    <div class="list">
-        <button id="enviar">Enviar</button>
+    <div class="listList" id="listList">
+        
     </div>
+
 
     <script src="day5.js"></script>
 </body>
